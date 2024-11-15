@@ -17,7 +17,6 @@
                 <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
                 <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-
             </ul>
         </div>
     </nav>
@@ -26,21 +25,34 @@
         <h1>Welcome to Our Hotel</h1>
         <p class="lead">Experience luxury and comfort</p>
         <div class="mt-4">
-            <form class="row g-2">
+            <form class="row g-3">
+                <!-- Check-In Date -->
                 <div class="col-md-3">
-                    <input type="date" class="form-control" placeholder="Check-In Date"  >
+                    <label for="checkin-date" class="form-label">Check-In Date</label>
+                    <input type="date" id="checkin-date" class="form-control" placeholder="Check-In Date">
                 </div>
+                
+                <!-- Check-Out Date -->
                 <div class="col-md-3">
-                    <input type="date" class="form-control" placeholder="Check-Out Date"  >
+                    <label for="checkout-date" class="form-label">Check-Out Date</label>
+                    <input type="date" id="checkout-date" class="form-control" placeholder="Check-Out Date">
                 </div>
+
+                <!-- Guests -->
                 <div class="col-md-3">
-                    <input type="number" class="form-control" placeholder="Guests" min="1"  >
+                    <label for="guests" class="form-label">Number of Guests</label>
+                    <input type="number" id="guests" class="form-control" placeholder="Guests" min="1">
                 </div>
+
+                <!-- Search Button -->
                 <div class="col-md-3">
-                    <a href="rooms.html" type="submit" class="btn btn-primary w-100">Search Rooms</a>
+                    <label class="mb-4" for=""></label>
+                    <a href="rooms.html" class="btn btn-primary w-100">Search Rooms</a>
                 </div>
             </form>
         </div>
     </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
