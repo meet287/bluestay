@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users and Bookings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .modal-content {
+            border-radius: 10px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .user-info .btn {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex" style="min-height: 100vh;">
+        <div class="sidebar bg-light py-3" style="width: 300px;">
+            <h4 class="text-center">Admin Panel</h4>
+            <ul class="nav flex-column mt-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="admin-rooms.html">Manage Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-bookings.html">Manage Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-profile.html">Manage Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-users.html">Manage Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-fluid p-4">
+            <h2 class="mt-3 mb-3">Users Profile and Bookings</h2>
+        
+        <!-- Users Information Table -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User 1 -->
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>(123) 456-7890</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal1">View Bookings</button>
+                        </td>
+                    </tr>
+                    <!-- User 2 -->
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>(234) 567-8901</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal2">View Bookings</button>
+                        </td>
+                    </tr>
+                    <!-- User 3 -->
+                    <tr>
+                        <td>3</td>
+                        <td>Mike Johnson</td>
+                        <td>mikejohnson@example.com</td>
+                        <td>(345) 678-9012</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal3">View Bookings</button>
+                        </td>
+                    </tr>
+                    <!-- User 4 -->
+                    <tr>
+                        <td>4</td>
+                        <td>Amy Brown</td>
+                        <td>amybrown@example.com</td>
+                        <td>(456) 789-0123</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal4">View Bookings</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Booking Modals for Users -->
+        <!-- Booking Modal 1 -->
+        <div class="modal fade" id="bookingModal1" tabindex="-1" aria-labelledby="bookingModalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel1">John Doe's Bookings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Booking 1: Deluxe Room</h6>
+                        <p><strong>Dates:</strong> Jan 1 - Jan 5</p>
+                        <p><strong>Guests:</strong> 2</p>
+<hr>
+                        <h6>Booking 2: Suite Room</h6>
+                        <p><strong>Dates:</strong> Feb 10 - Feb 15</p>
+                        <p><strong>Guests:</strong> 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Modal 2 -->
+        <div class="modal fade" id="bookingModal2" tabindex="-1" aria-labelledby="bookingModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel2">Jane Smith's Bookings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Booking 1: Ocean View Room</h6>
+                        <p><strong>Dates:</strong> Mar 1 - Mar 5</p>
+                        <p><strong>Guests:</strong> 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Modal 3 -->
+        <div class="modal fade" id="bookingModal3" tabindex="-1" aria-labelledby="bookingModalLabel3" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel3">Mike Johnson's Bookings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Booking 1: Standard Room</h6>
+                        <p><strong>Dates:</strong> Apr 1 - Apr 3</p>
+                        <p><strong>Guests:</strong> 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Modal 4 -->
+        <div class="modal fade" id="bookingModal4" tabindex="-1" aria-labelledby="bookingModalLabel4" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel4">Amy Brown's Bookings</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Booking 1: Premium Room</h6>
+                        <p><strong>Dates:</strong> May 15 - May 20</p>
+                        <p><strong>Guests:</strong> 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
